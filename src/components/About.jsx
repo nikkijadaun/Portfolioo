@@ -1,5 +1,5 @@
 import React from "react";
-
+import image from "../assets/images/image.png";
 const About = () => {
   return (
     <section
@@ -10,7 +10,7 @@ const About = () => {
         {/* Left Column - Picture */}
         <div className="w-full lg:w-1/2 flex justify-center mt-10 lg:mt-0">
           <img
-            src="https://github-production-user-asset-6210df.s3.amazonaws.com/89139437/322069106-833881a7-d2fd-4176-a6fb-eaa01a0a8675.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250114%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250114T063118Z&X-Amz-Expires=300&X-Amz-Signature=535ab21f340852addc8e6ba086fcbf92aa329f18d206687fc9cdd360d28374f5&X-Amz-SignedHeaders=host"
+            src={image}
             alt="Atul Kumar Singh"
             className="w-60 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[28rem] object-cover shadow-lg rounded-lg transform transition-all duration-500 hover:scale-105"
           />
