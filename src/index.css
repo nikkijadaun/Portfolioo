@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Chatbot container that stays fixed on the screen */
+.chatbot-container {
+    position: fixed;      /* Fixed positioning to stay on screen while scrolling */
+    bottom: 10px;         /* Position from the bottom */
+    right: 10px;          /* Position from the right */
+    z-index: 9999;        /* Ensure it's on top of other elements */
+    transition: all 0.5s ease-in-out;
+}
+
+/* Initial size when closed */
+.chatbot-small {
+    width: 80px;
+    height: 80px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.5); /* Initial scale */
+    transition: all 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* Size when open */
+.chatbot-large {
+    width: 350px;
+    height: 350px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out; /* Smooth transition */
+    min-width: 350px;  /* Prevent the container from shrinking */
+    min-height: 350px; /* Prevent the container from shrinking */
+}
+
+/* Chat history area */
+.chat-history {
+    overflow-y: auto;
+    max-height: 250px;
+    padding-right: 10px;
+    margin-bottom: 10px;  /* Add space below chat history */
+    flex-grow: 1;         /* Allow chat history to take available space */
+}
+
+/* Input field and button style */
+input {
+    flex: 1; /* Allow input to take available space */
+    min-width: 0; /* Prevent shrinking */
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;  /* Space between input and button */
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+.chatbot-large .chat-history {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Ensure sections don't overlap with the fixed navbar */
+section {
+    padding-top: 4rem; /* Adjust for fixed navbar height */
+}
+
+.chatbot-user {
+    background-color: #cfe2f3;
+}
+
+.chatbot-bot {
+    background-color: #f3f3f3;
+}
+.chatbot-large.show .chat-history {
+    opacity: 1;
+}
+.blinking-cursor {
+    display: inline-block;
+    font-weight: bold;
+    animation: blink 1s step-start infinite;
+    color: #ffffff;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
