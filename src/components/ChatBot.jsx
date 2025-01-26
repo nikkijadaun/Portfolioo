@@ -1,21 +1,35 @@
+// src/components/ChatBot.jsx
 import React, { useState } from "react";
 import { FaTimes, FaRobot } from "react-icons/fa";
 import { useChatbot } from "../hooks/useChatbot";
+import { faqData } from "../utils/resumeData"; // Import the FAQ data
 
 const Chatbot = () => {
   const { chatHistory, sendMessage, loading } = useChatbot();
   const [message, setMessage] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedQuestions, setSelectedQuestions] = useState([]); // State to track selected questions
 
   const handleSendMessage = () => {
-    if (!message.trim()) return;
+    if (!message.trim()) return; // Prevent sending empty messages
     sendMessage(message);
-    setMessage("");
+    setMessage(""); // Clear the input field
   };
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleQuestionSelect = (question) => {
+    sendMessage(question); // Send the selected question to the chatbot
+    setSelectedQuestions((prev) => [...prev, question]); // Add the question to selected questions
+    setMessage(""); // Clear the input field
+  };
+
+  // Filter out selected questions from the FAQ data
+  const remainingQuestions = faqData.filter(
+    (faq) => !selectedQuestions.includes(faq.question)
+  );
 
   return (
     <div className={`chatbot-container ${isOpen ? "chatbot-large" : "chatbot-small"}`}>
@@ -39,6 +53,19 @@ const Chatbot = () => {
                   </div>
                 ))}
               </div>
+
+              {/* Display remaining questions below the chat history */}
+              <div className="faq-questions mt-4 flex flex-wrap gap-2">
+                {remainingQuestions.map((faq, index) => (
+                  <button
+                    key={index}
+                    className="rounded-full bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 transition duration-200"
+                    onClick={() => handleQuestionSelect(faq.question)}
+                  >
+                    {faq.question}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div className="mt-4 flex">
@@ -49,8 +76,8 @@ const Chatbot = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" && !e.shiftKey) {
-                    e.preventDefault();
-                    handleSendMessage();
+                    e.preventDefault(); // Prevent default behavior (new line)
+                    handleSendMessage(); // Call the send message function
                   }
                 }}
                 placeholder="Ask a question about my resume..."

@@ -78,8 +78,8 @@ button:disabled {
     cursor: not-allowed;
 }
 .chatbot-large .chat-history {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    opacity: 1; /* Ensure chat history is fully visible */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
 }
 
 /* Ensure sections don't overlap with the fixed navbar */
@@ -88,11 +88,15 @@ section {
 }
 
 .chatbot-user {
-    background-color: #cfe2f3;
+    background-color: #cfe2f3; /* Light blue for user messages */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding for user messages */
 }
 
 .chatbot-bot {
-    background-color: #f3f3f3;
+    background-color: #f3f3f3; /* Light gray for bot messages */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding for bot messages */
 }
 .chatbot-large.show .chat-history {
     opacity: 1;
@@ -109,4 +113,13 @@ section {
       opacity: 0;
     }
   }
-  
+  .chatbot-small .chat-history {
+    opacity: 0; /* Hide chat history when small */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+.faq-questions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between buttons */
+}
+
