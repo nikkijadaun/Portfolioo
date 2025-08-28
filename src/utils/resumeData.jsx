@@ -3,7 +3,7 @@ export const faqData = [
   {
     question: "What is your educational background?",
     answer:
-      "I am pursuing a B.Tech in Electronics and Communication Engineering at NIT Arunachal Pradesh,will be graduating in 2025.",
+      "I am recent B.Tech graduate in Electronics and Communication Engineering at NIT Arunachal Pradesh,will be graduating in 2025.",
   },
   {
     question: "What are your technical skills?",
@@ -13,7 +13,7 @@ export const faqData = [
   {
     question: "Do you have internship experience?",
     answer:
-      "Yes, I have interned at Bharat Electronics Limited and completed J.P. Morgan's Software Engineering Virtual Experience.",
+      "Yes, I have interned at ONGC and completed Exposys Data Lab's Software Engineering Virtual Experience.",
   },
   {
     question: "What projects have you worked on?",

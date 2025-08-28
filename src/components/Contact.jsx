@@ -15,7 +15,7 @@ function Contact() {
         <div className="flex justify-center items-center gap-16">
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/atul-kumar-singh-6a49b7228/"
+            href="https://www.linkedin.com/in/daulat-singh-jadaun-825750255/"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex flex-col items-center gap-3 text-lg font-medium text-gray-300 hover:text-blue-400 transition-transform transform hover:scale-110"
@@ -28,7 +28,7 @@ function Contact() {
 
           {/* GitHub */}
           <a
-            href="https://github.com/1AtulSingh"
+            href="https://github.com/nikkijadaun"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex flex-col items-center gap-3 text-lg font-medium text-gray-300 hover:text-gray-400 transition-transform transform hover:scale-110"
@@ -41,7 +41,7 @@ function Contact() {
 
           {/* Email */}
           <a
-            href="mailto:atuldev8132@gmail.com"
+            href="mailto:jadaundaulat2002@gmail.com"
             className="group flex flex-col items-center gap-3 text-lg font-medium text-gray-300 hover:text-red-400 transition-transform transform hover:scale-110"
           >
             <div className="w-20 h-20 flex items-center justify-center bg-white rounded-full shadow-lg group-hover:shadow-red-400 transition-all">

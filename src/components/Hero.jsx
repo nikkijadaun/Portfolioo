@@ -61,7 +61,7 @@ const Hero = () => {
         {/* Left Column - Text */}
         <div className="text-center md:text-left w-full md:w-1/2">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 text-white">
-            Hi, I'm Atul Kumar Singh
+            Hi, I'm Daulat Singh Jadaun
           </h1>
           <p className="text-md sm:text-lg md:text-xl mb-6 text-gray-200">
             <span className="text-gray-400">I am into </span>

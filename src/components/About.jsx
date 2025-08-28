@@ -22,7 +22,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-md sm:text-lg md:text-xl leading-relaxed mb-6 text-gray-300">
-            Hi, I'm <span className="text-yellow-400 font-semibold">Atul Kumar Singh</span>, a passionate Software Developer currently
+            Hi, I'm <span className="text-yellow-400 font-semibold">Daulat Singh Jadaun</span>, a passionate Software Developer currently
             pursuing my B.Tech from NIT Arunachal Pradesh. With a strong foundation in Full-Stack Development and core subjects like Data
             Structures, Algorithms, and Computer Networks, I strive to create innovative solutions to complex problems.
           </p>
