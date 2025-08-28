@@ -3,7 +3,7 @@ export const faqData = [
   {
     question: "What is your educational background?",
     answer:
-      "I am recent B.Tech graduate in Electronics and Communication Engineering at NIT Arunachal Pradesh,will be graduating in 2025.",
+      "I am recent B.Tech graduate in Electronics and Communication Engineering at NIT Arunachal Pradesh.",
   },
   {
     question: "What are your technical skills?",
